@@ -1,0 +1,14 @@
+[Unit]
+Description=Monitor Test Process
+After=network.target
+
+[Service]
+ExecStart=/Users/lisa/monitoring-task/monitoring.sh
+Restart=always
+User=lisa
+Group=lisa
+Environment=PATH=/usr/bin:/bin
+WorkingDirectory=/Users/lisa/monitoring-task
+
+[Install]
+WantedBy=multi-user.target
