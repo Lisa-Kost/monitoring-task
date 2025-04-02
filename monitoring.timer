@@ -1,0 +1,9 @@
+[Unit]
+Description=Run monitoring script every minute
+
+[Timer]
+OnCalendar=*:*:0/1
+Unit=monitoring.service
+
+[Install]
+WantedBy=timers.target
